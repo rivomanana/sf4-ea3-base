@@ -1,0 +1,25 @@
+'Modifier un utilisateur': 'Modifier un utilisateur'
+'The password fields must match': 'Les deux mots de passe ne sont pas identique'
+Identifiants: Identifiants
+Information de base: 'Information de base'
+Status: Status
+Roles: Roles
+'Utilisateur mis à jour': 'Utilisateur mis à jour'
+role_label.admin: Administrateur
+role_label.user: Utilisateur
+'Retour à la liste': 'Retour à la liste'
+Proprieté: Proprieté
+Type: Type
+Valider: Valider
+Adresse: Adresse
+Prénom: Prénom
+Nom: Nom
+email: E-mail
+'Modifier votre profil': 'Modifier votre profil'
+'Ajouter un nouvel utilisateur': 'Ajouter un nouvel utilisateur'
+'Le nouvel utilisateur a été crée avec succes': 'Le nouvel utilisateur a été crée avec succes'
+'Vous ne pouvez pas supprimer votre propre compte': 'Vous ne pouvez pas supprimer votre propre compte'
+'Modifier à jour les rôles d-un utilisateur': 'Mettre à jour les rôles d''un utilisateur'
+'Mis à jour reussie': 'Mis à jour reussie'
+'form.label.delete': 'Supprimer'
+Statut: 'Statut'

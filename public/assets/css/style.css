@@ -1,0 +1,18 @@
+.login-wrapper .content{
+    padding: 30px 0;
+}
+.form-group label, .form-group legend.col-form-label{
+    flex:75% 0 0;
+    text-align: left;
+}
+
+.field-checkbox .form-widget, .form-group.field-collection-action{
+    margin-left: 0!important;
+}
+@media only screen and (max-width:800px){
+    .form-action-search input[type=search].form-control{
+        width: 100%;
+    }
+}
+
+

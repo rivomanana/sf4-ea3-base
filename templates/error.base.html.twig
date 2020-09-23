@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, noimageindex, notranslate, nocache" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="generator" content="EasyAdmin" />
+
+    <title>Erreur</title>
+
+    <link rel="stylesheet" href="{{ asset('bundles/easyadmin/app.css') }}">
+
+    {% block head_custom_stylesheets %}{% endblock head_custom_stylesheets %}
+</head>
+
+{% block body %}
+    <body id="{% block body_id %}{% endblock %}" class="easyadmin {% block body_class %}{% endblock %}">
+
+
+    <div class="container">
+        {% block base_content %}{% endblock base_content %}
+    </div>
+
+    </body>
+{% endblock body %}
+</html>

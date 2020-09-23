@@ -1,0 +1,4 @@
+parameters:
+    roles_h3:
+      - ROLE_ADMIN
+      - ROLE_USER

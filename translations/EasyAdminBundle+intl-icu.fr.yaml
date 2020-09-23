@@ -1,0 +1,6 @@
+label.form.empty_value: Identifiant
+user.logged_in_as: 'Connecté en tant que'
+user.anonymous: 'Utilisateur sans nom'
+login_page.username: 'Nom d''utilisateur'
+login_page.password: 'Mot de passe'
+login_page.sign_in: Connexion

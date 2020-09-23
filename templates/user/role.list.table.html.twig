@@ -1,0 +1,6 @@
+
+<ul class="list-inline">
+    {% for role in field.value %}
+        <li class="list-inline-item"><span class="badge badge-info">{{ _role(role) }}</span></li>
+    {% endfor %}
+</ul>

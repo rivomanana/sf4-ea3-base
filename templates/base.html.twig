@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale|split('_')|first|default('en') }}" dir="{{ easyadmin_config('design.rtl') ? 'rtl' : 'ltr' }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, noimageindex, notranslate, nocache" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="generator" content="EasyAdmin" />
+
+    <title>{% block page_title %}{% endblock %}</title>
+
+    {% block head_stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/easyadmin/app.css') }}">
+    {% endblock %}
+
+    {% block head_custom_stylesheets %}
+        {% for css_asset in easyadmin_config('design.assets.css') %}
+            <link rel="stylesheet" href="{{ asset(css_asset) }}">
+        {% endfor %}
+    {% endblock head_custom_stylesheets %}
+
+    {% if easyadmin_config('design.brand_color') != 'hsl(230, 55%, 60%)' %}
+        <style>
+            :root { --color-primary: {{ easyadmin_config('design.brand_color') }}; }
+        </style>
+    {% endif %}
+
+    {% block head_favicon %}
+        {% set favicon = easyadmin_config('design.assets.favicon') %}
+        <link rel="icon" type="{{ favicon.mime_type }}" href="{{ asset(favicon.path) }}" />
+    {% endblock %}
+
+    {% block head_javascript %}
+        <script src="{{ asset('bundles/easyadmin/app.js') }}"></script>
+    {% endblock head_javascript %}
+
+    {% if easyadmin_config('design.rtl') %}
+        <link rel="stylesheet" href="{{ asset('bundles/easyadmin/app.rtl.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/easyadmin/app-custom-rtl.css') }}">
+    {% endif %}
+</head>
+
+{% block body %}
+    <body id="{% block body_id %}{% endblock %}" class="easyadmin {% block body_class %}{% endblock %}">
+
+    <script>
+        document.body.classList.add(
+            'easyadmin-content-width-' + (localStorage.getItem('easyadmin/content/width') || 'normal'),
+            'easyadmin-sidebar-width-' + (localStorage.getItem('easyadmin/sidebar/width') || 'normal')
+        );
+    </script>
+    <div class="container">
+        {% block base_content %}{% endblock base_content %}
+    </div>
+
+
+    {% block body_javascript %}{% endblock body_javascript %}
+
+    {% block body_custom_javascript %}
+        {% for js_asset in easyadmin_config('design.assets.js') %}
+            <script src="{{ asset(js_asset) }}"></script>
+        {% endfor %}
+        {% include 'js/common/main.html.twig' %}
+    {% endblock body_custom_javascript %}
+
+    </body>
+{% endblock body %}
+</html>
